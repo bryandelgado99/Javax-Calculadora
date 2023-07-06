@@ -10,8 +10,11 @@ Este proyecto implementa una calculadora, realizada en Java mediante la librerí
 * Resta
 * Multiplicación
 * División
+* Potencia
+* Raíz Cuadrada
 * Función sen()
 * Función cos()
+* Función tan()
 
 ## Presentando su diseño
 ### Paleta de Colores
