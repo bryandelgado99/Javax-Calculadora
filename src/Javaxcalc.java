@@ -26,6 +26,7 @@ public class Javaxcalc {
     private JButton tan_boton;
     private JButton ACButton;
     private JLabel data_input;
+    private JLabel resultado;
 
     //Main section
     public static void main(String[] args) {
