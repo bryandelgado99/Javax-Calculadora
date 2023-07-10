@@ -127,6 +127,16 @@ public class Javaxcalc {
                 data_final.setText(data_final.getText()+"0");
             }
         });
+        //boton punto para decimales
+        decimal_but.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
+                }
+                data_final.setText(data_final.getText()+".");
+            }
+        });
         //--------------------Acciones para botones de operaciones basicas------------------------
         sum_boton.addActionListener(new ActionListener() {
             @Override
