@@ -194,11 +194,58 @@ public class Javaxcalc {
             @Override
             public void actionPerformed(ActionEvent e) {
                 num2 = Double.parseDouble(data_final.getText());
-                data_operations.setText(num1 + " * "+ num2 + "% = ");
+                data_operations.setText(num1 + " x "+ num2 + "% = ");
 
                 double resultado = num1*(num2/100);
                 data_final.setText(String.valueOf(resultado));
                 num1 = resultado;
+            }
+        });
+        //-------------Aciones para botones de funciones trigonometricas---------------
+        //Para las funciones trigonometricas el propio boton registra el numero y realiza la operacion
+        sen_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText("sin(" + data_final.getText() + ")");
+                data_final.setText("");
+
+                //Operacion seno
+                data_operations.setText("sin(" + num1 + ") = ");
+                double radianes = Math.toRadians(num1);
+                double resultado = Math.sin(radianes);
+                data_final.setText(String.valueOf(resultado));
+                num1 = radianes;
+            }
+        });
+        cos_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText("cos(" + data_final.getText() + ")");
+                data_final.setText("");
+
+                //Operacion coseno
+                data_operations.setText("cos(" + num1 + ") = ");
+                double radianes = Math.toRadians(num1);
+                double resultado = Math.cos(radianes);
+                data_final.setText(String.valueOf(resultado));
+                num1 = radianes;
+            }
+        });
+        tan_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText("tan(" + data_final.getText() + ")");
+                data_final.setText("");
+
+                //Operacion tangente
+                data_operations.setText("tan(" + num1 + ") = ");
+                double radianes = Math.toRadians(num1);
+                double resultado = Math.tan(radianes);
+                data_final.setText(String.valueOf(resultado));
+                num1 = radianes;
             }
         });
         //-------------Acciones para el boton igual---------------------------
