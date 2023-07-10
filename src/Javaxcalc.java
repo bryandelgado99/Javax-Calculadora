@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Javaxcalc {
     private JPanel rootPanel;
@@ -27,6 +29,99 @@ public class Javaxcalc {
     private JButton ACButton;
     private JLabel data_input;
     private JLabel resultado;
+
+    public Javaxcalc() {
+        boton_1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"1");
+            }
+        });
+        boton_2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"2");
+            }
+        });
+        boton_3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"3");
+            }
+        });
+        boton_4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"4");
+            }
+        });
+        boton_5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"5");
+            }
+        });
+        boton_6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"6");
+            }
+        });
+        boton_7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"7");
+            }
+        });
+        boton_8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"8");
+            }
+        });
+        boton_9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"9");
+            }
+        });
+        boton_cero.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(data_input.getText() == "0" | data_input.getText() == null){
+                    data_input.setText("");
+                }
+                data_input.setText(data_input.getText()+"0");
+            }
+        });
+    }
 
     //Main section
     public static void main(String[] args) {
