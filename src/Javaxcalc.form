@@ -272,9 +272,20 @@
           <text value="tan ( )"/>
         </properties>
       </component>
-      <component id="e214" class="javax.swing.JLabel" binding="data_input">
+      <component id="38831" class="javax.swing.JButton" binding="ACButton" default-binding="true">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1151923"/>
+          <font name="a Atomic Md" size="16"/>
+          <foreground color="-1"/>
+          <text value="AC"/>
+        </properties>
+      </component>
+      <component id="e214" class="javax.swing.JLabel" binding="data_final">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="11" height="1"/>
           </grid>
         </constraints>
@@ -287,27 +298,16 @@
           <verticalTextPosition value="0"/>
         </properties>
       </component>
-      <component id="38831" class="javax.swing.JButton" binding="ACButton" default-binding="true">
+      <component id="8e017" class="javax.swing.JLabel" binding="data_operations">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-1151923"/>
-          <font name="a Atomic Md" size="16"/>
-          <foreground color="-1"/>
-          <text value="AC"/>
-        </properties>
-      </component>
-      <component id="6fcd0" class="javax.swing.JLabel" binding="resultado">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="2" use-parent-layout="false">
-            <preferred-size width="-1" height="0"/>
-          </grid>
+          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-2032644"/>
-          <foreground color="-12895429"/>
-          <text value="Resultado"/>
+          <enabled value="false"/>
+          <font size="18"/>
+          <horizontalAlignment value="0"/>
+          <text value="0"/>
         </properties>
       </component>
     </children>

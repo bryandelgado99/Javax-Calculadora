@@ -27,98 +27,179 @@ public class Javaxcalc {
     private JButton cos_boton;
     private JButton tan_boton;
     private JButton ACButton;
-    private JLabel data_input;
-    private JLabel resultado;
+    private JLabel data_final;
+    private JLabel data_operations;
+
+    //variables para operaciones
+    double num1 = 0;
+    double num2 = 0;
+    String operacion;
 
     public Javaxcalc() {
+        //---------------------ACCIONES PARA BOTONES DE NUMEROS------------------------------
         boton_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"1");
+                data_final.setText(data_final.getText()+"1");
             }
         });
         boton_2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"2");
+                data_final.setText(data_final.getText()+"2");
             }
         });
         boton_3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"3");
+                data_final.setText(data_final.getText()+"3");
             }
         });
         boton_4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"4");
+                data_final.setText(data_final.getText()+"4");
             }
         });
         boton_5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"5");
+                data_final.setText(data_final.getText()+"5");
             }
         });
         boton_6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"6");
+                data_final.setText(data_final.getText()+"6");
             }
         });
         boton_7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"7");
+                data_final.setText(data_final.getText()+"7");
             }
         });
         boton_8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"8");
+                data_final.setText(data_final.getText()+"8");
             }
         });
         boton_9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"9");
+                data_final.setText(data_final.getText()+"9");
             }
         });
         boton_cero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_input.getText() == "0" | data_input.getText() == null){
-                    data_input.setText("");
+                if(data_final.getText() == "0" | data_final.getText() == null){
+                    data_final.setText("");
                 }
-                data_input.setText(data_input.getText()+"0");
+                data_final.setText(data_final.getText()+"0");
+            }
+        });
+        //--------------------ACCIONES PARA BOTONES DE OPERACIONES BASICAS------------------------
+        sum_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacion = "suma";
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(data_final.getText()+" + ");
+                data_final.setText("");
+            }
+        });
+        rest_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacion = "resta";
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(data_final.getText()+" - ");
+                data_final.setText("");
+            }
+        });
+        multi_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacion = "multiplicacion";
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(data_final.getText()+" x ");
+                data_final.setText("");
+            }
+        });
+        div_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacion = "division";
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(data_final.getText()+" / ");
+                data_final.setText("");
+            }
+        });
+        boton_igual.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num2 = Double.parseDouble(data_final.getText());
+                if(operacion == "suma"){
+                    data_operations.setText(num1 + " + "+ num2 + " = ");
+                    double resultado = num1+num2;
+                    data_final.setText(String.valueOf(resultado));
+                    num1 = resultado;
+                }
+                else if(operacion == "resta"){
+                    data_operations.setText(num1 + " - "+ num2 + " = ");
+                    double resultado = num1-num2;
+                    data_final.setText(String.valueOf(resultado));
+                    num1 = resultado;
+                }
+                else if(operacion == "multiplicacion"){
+                    data_operations.setText(num1 + " x "+ num2 + " = ");
+                    double resultado = num1*num2;
+                    data_final.setText(String.valueOf(resultado));
+                    num1 = resultado;
+                }
+                else if(operacion == "division"){
+                    data_operations.setText(num1 + " / "+ num2 + " = ");
+                    double resultado = num1/num2;
+                    data_final.setText(String.valueOf(resultado));
+                    num1 = resultado;
+                }
+            }
+        });
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                data_final.setText(null);
+                data_operations.setText(null);
+                num1 = num2 = 0;
             }
         });
     }
