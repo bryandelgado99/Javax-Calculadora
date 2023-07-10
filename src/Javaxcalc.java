@@ -20,8 +20,8 @@ public class Javaxcalc {
     private JButton multi_boton;
     private JButton decimal_but;
     private JButton div_boton;
-    private JButton raiz_boton;
     private JButton potencia_boton;
+    private JButton raiz_boton;
     private JButton porcent_boton;
     private JButton sen_boton;
     private JButton cos_boton;
@@ -36,7 +36,7 @@ public class Javaxcalc {
     String operacion;
 
     public Javaxcalc() {
-        //---------------------ACCIONES PARA BOTONES DE NUMEROS------------------------------
+        //------------------Acciones para botones de numeros------------------------------
         boton_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,7 +127,7 @@ public class Javaxcalc {
                 data_final.setText(data_final.getText()+"0");
             }
         });
-        //--------------------ACCIONES PARA BOTONES DE OPERACIONES BASICAS------------------------
+        //--------------------Acciones para botones de operaciones basicas------------------------
         sum_boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -164,6 +164,44 @@ public class Javaxcalc {
                 data_final.setText("");
             }
         });
+        //--------Acciones para botones potencia, raiz y porcentaje---------
+        potencia_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operacion = "potencia";
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(data_final.getText()+" ^ ");
+                data_final.setText("");
+            }
+        });
+        //Para las operaciones raiz,porcentaje el propio boton registra el numero y realiza la operacion
+        raiz_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //registro de numero
+                num1 = Double.parseDouble(data_final.getText());
+                data_operations.setText(" √ " + data_final.getText());
+                data_final.setText("");
+
+                //operacion raiz cuadrada
+                data_operations.setText("√" + num1 + " = ");
+                double resultado = Math.sqrt(num1);
+                data_final.setText(String.valueOf(resultado));
+                num1 = resultado;
+            }
+        });
+        porcent_boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num2 = Double.parseDouble(data_final.getText());
+                data_operations.setText(num1 + " * "+ num2 + "% = ");
+
+                double resultado = num1*(num2/100);
+                data_final.setText(String.valueOf(resultado));
+                num1 = resultado;
+            }
+        });
+        //-------------Acciones para el boton igual---------------------------
         boton_igual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -189,6 +227,12 @@ public class Javaxcalc {
                 else if(operacion == "division"){
                     data_operations.setText(num1 + " / "+ num2 + " = ");
                     double resultado = num1/num2;
+                    data_final.setText(String.valueOf(resultado));
+                    num1 = resultado;
+                }
+                else if(operacion == "potencia"){
+                    data_operations.setText(num1 + " ^ "+ num2 + " = ");
+                    double resultado = Math.pow(num1,num2);
                     data_final.setText(String.valueOf(resultado));
                     num1 = resultado;
                 }

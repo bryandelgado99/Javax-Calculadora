@@ -217,7 +217,7 @@
           <text value="/"/>
         </properties>
       </component>
-      <component id="74bd6" class="javax.swing.JButton" binding="raiz_boton">
+      <component id="74bd6" class="javax.swing.JButton" binding="potencia_boton">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -228,7 +228,7 @@
           <text value="^"/>
         </properties>
       </component>
-      <component id="d6662" class="javax.swing.JButton" binding="potencia_boton">
+      <component id="d6662" class="javax.swing.JButton" binding="raiz_boton">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -305,7 +305,7 @@
         <properties>
           <background color="-2032644"/>
           <enabled value="false"/>
-          <font size="18"/>
+          <font size="14"/>
           <horizontalAlignment value="0"/>
           <text value="0"/>
         </properties>
