@@ -281,11 +281,17 @@ public class Javaxcalc {
                     data_final.setText(String.valueOf(resultado));
                     num1 = resultado;
                 }
-                else if(operacion == "division"){
-                    data_operations.setText(num1 + " / "+ num2 + " = ");
-                    double resultado = num1/num2;
-                    data_final.setText(String.valueOf(resultado));
-                    num1 = resultado;
+                else if(operacion == "division") {
+                    data_operations.setText(num1 + " / " + num2 + " = ");
+                    if (num2 == 0.0) {
+                        data_final.setText("");
+                        data_final.setText(data_final.getText()+"No se puede dividir entre cero");
+                        throw new ArithmeticException("No se puede dividir entre cero");
+                    } else {
+                        double resultado = num1 / num2;
+                        data_final.setText(String.valueOf(resultado));
+                        num1 = resultado;
+                    }
                 }
                 else if(operacion == "potencia"){
                     data_operations.setText(num1 + " ^ "+ num2 + " = ");
