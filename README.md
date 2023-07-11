@@ -27,21 +27,23 @@ La paleta de colores que compone esta calculadora representa un conjunto de eleg
 
 ## Funcionamiento
 En el apartado de funcionamiento, se presentan las operaciones tras su uso, al igual que el manejo de excepciones
-1. Suma
+1. Suma <br>
 ![suma](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/suma.png)
-3. Resta
+3. Resta <br>
 ![resta](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/resta.png)
-4. Multiplicación
+4. Multiplicación <br>
 ![producto](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/producto.png)
-5. División
+5. División <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/division.png)
-6. Potencia
+6. Potencia <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/potencia.png)
-7. Raíz Cuadrada
+7. Raíz Cuadrada <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/raiz.png)
-8. Función sen()
+8. Función sen() <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/seno.png)
-9. Función cos()
+9. Función cos() <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/cos.png)
-10. Función tan()
+10. Función tan() <br>
 ![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/tan.png)
+11. Division entre cero <br>
+![](https://github.com/bryandelgado99/Javax-Calculadora/blob/3fa59c552ba3bcf3497728864d3e2659188c2767/images/divcero.png)
