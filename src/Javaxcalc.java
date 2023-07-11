@@ -324,5 +324,6 @@ public class Javaxcalc {
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setSize (435,630);
+        frame.setLocationRelativeTo(null);
     }
 }
