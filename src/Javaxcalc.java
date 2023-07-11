@@ -40,7 +40,7 @@ public class Javaxcalc {
         boton_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"1");
@@ -49,7 +49,7 @@ public class Javaxcalc {
         boton_2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"2");
@@ -58,7 +58,7 @@ public class Javaxcalc {
         boton_3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"3");
@@ -67,7 +67,7 @@ public class Javaxcalc {
         boton_4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"4");
@@ -76,7 +76,7 @@ public class Javaxcalc {
         boton_5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"5");
@@ -85,7 +85,7 @@ public class Javaxcalc {
         boton_6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"6");
@@ -94,7 +94,7 @@ public class Javaxcalc {
         boton_7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"7");
@@ -103,7 +103,7 @@ public class Javaxcalc {
         boton_8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"8");
@@ -112,7 +112,7 @@ public class Javaxcalc {
         boton_9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero"){
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"9");
@@ -121,7 +121,7 @@ public class Javaxcalc {
         boton_cero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(data_final.getText() == "0" | data_final.getText() == null){
+                if(data_final.getText() == "0" | data_final.getText() == null | data_final.getText() =="No se puede dividir entre cero") {
                     data_final.setText("");
                 }
                 data_final.setText(data_final.getText()+"0");
@@ -285,13 +285,16 @@ public class Javaxcalc {
                     data_operations.setText(num1 + " / " + num2 + " = ");
                     if (num2 == 0.0) {
                         data_final.setText("");
-                        data_final.setText(data_final.getText()+"No se puede dividir entre cero");
+                        data_final.setText("No se puede dividir entre cero");
+                        JOptionPane.showMessageDialog(null, "Ingrese otro numero");
                         throw new ArithmeticException("No se puede dividir entre cero");
+
                     } else {
                         double resultado = num1 / num2;
                         data_final.setText(String.valueOf(resultado));
                         num1 = resultado;
                     }
+
                 }
                 else if(operacion == "potencia"){
                     data_operations.setText(num1 + " ^ "+ num2 + " = ");
@@ -301,6 +304,7 @@ public class Javaxcalc {
                 }
             }
         });
+
         ACButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
